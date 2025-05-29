@@ -268,7 +268,7 @@ if st.button("Run Clustering", help="Click to perform KMeans clustering with the
                     centers = scaler.inverse_transform(kmeans.cluster_centers_)
                     centers_df = pd.DataFrame(centers, columns=selected_features)
                     st.dataframe(centers_df.style.background_gradient(cmap='YlOrRd'), use_container_width=True)
-                    st.subheader("📊 Cluster Centers Comparison")
+                    st.subheader("Cluster Centers Comparison")
                     fig, ax = plt.subplots(figsize=(10, 5))
 
                     for i in range(centers_df.shape[0]):
